@@ -18,8 +18,12 @@ yearEl.textContent = currentYear;
 
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
+const bodyEl = document.getElementsByTagName("body")[0];
+const htmlEl = document.getElementsByTagName("html")[0];
 btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
+  // bodyEl.classList.add("overflow-Y");
+  htmlEl.classList.toggle("overflow-Y");
 });
 
 ///////////////////////////////////////////////////////////
@@ -30,6 +34,10 @@ const allLinks = document.querySelectorAll("a:link");
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
     e.preventDefault();
+    if (htmlEl.classList.contains("overflow-Y")) {
+      htmlEl.classList.remove("overflow-Y");
+    }
+
     const href = link.getAttribute("href");
 
     // Scroll back to top
