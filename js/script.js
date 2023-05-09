@@ -40,6 +40,7 @@ allLinks.forEach(function (link) {
     if (htmlEl.classList.contains("overflow-Y")) {
       htmlEl.classList.remove("overflow-Y");
     }
+    overlay.classList.add("hidden");
 
     const href = link.getAttribute("href");
 

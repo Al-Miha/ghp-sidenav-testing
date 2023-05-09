@@ -365,7 +365,9 @@ Instead, 1rem = 1em = 16px */
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
 }
 
 .overlay {
@@ -374,7 +376,8 @@ Instead, 1rem = 1em = 16px */
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(3px);
   z-index: 5;
+  transition: all 0.3s ease-in;
 }
