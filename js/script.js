@@ -20,10 +20,13 @@ const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
 const bodyEl = document.getElementsByTagName("body")[0];
 const htmlEl = document.getElementsByTagName("html")[0];
+const overlay = document.querySelector(".overlay");
+
 btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
   // bodyEl.classList.add("overflow-Y");
   htmlEl.classList.toggle("overflow-Y");
+  overlay.classList.toggle("hidden");
 });
 
 ///////////////////////////////////////////////////////////
